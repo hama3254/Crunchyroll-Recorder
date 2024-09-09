@@ -1,0 +1,93 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="DarkModeValue" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="Pfad" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ffmpeg_command" Type="System.String" Scope="User">
+      <Value Profile="(Default)"> -c copy -c:a copy -bsf:a aac_adtstoasc</Value>
+    </Setting>
+    <Setting Name="AddedSubs" Type="System.String" Scope="User">
+      <Value Profile="(Default)">None</Value>
+    </Setting>
+    <Setting Name="SubFolder_Value" Type="System.String" Scope="User">
+      <Value Profile="(Default)">[ ignore subfolder ]</Value>
+    </Setting>
+    <Setting Name="TempFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Startseite" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://www.crunchyroll.com/</Value>
+    </Setting>
+    <Setting Name="Prefix_S" Type="System.String" Scope="User">
+      <Value Profile="(Default)">[default season prefix]</Value>
+    </Setting>
+    <Setting Name="Prefix_E" Type="System.String" Scope="User">
+      <Value Profile="(Default)">[default episode prefix]</Value>
+    </Setting>
+    <Setting Name="DefaultSubCR" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="VideoFormat" Type="System.String" Scope="User">
+      <Value Profile="(Default)">.mp4</Value>
+    </Setting>
+    <Setting Name="MergeSubs" Type="System.String" Scope="User">
+      <Value Profile="(Default)">[merge disabled]</Value>
+    </Setting>
+    <Setting Name="KodiSupport" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="Dark_Mode" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="QueueMode" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="IncludeLangName" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="CR_Chapters" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="DubMode" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="LangNameType" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="Reso" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1080</Value>
+    </Setting>
+    <Setting Name="CR_NameMethode" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="LeadingZero" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="IgnoreSeason" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="Subtitle" Type="System.String" Scope="User">
+      <Value Profile="(Default)">None</Value>
+    </Setting>
+    <Setting Name="NameTemplate" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Unused</Value>
+    </Setting>
+    <Setting Name="CR_Dub" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ja-JP</Value>
+    </Setting>
+    <Setting Name="ffmpeg_command_override" Type="System.String" Scope="User">
+      <Value Profile="(Default)">null</Value>
+    </Setting>
+    <Setting Name="Captions" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="User_Agend" Type="System.String" Scope="User">
+      <Value Profile="(Default)">"User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36 Edg/112.0.1722.34"</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

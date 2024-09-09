@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9B604819-2DB7-4BE1-BA43-43BABEBB5EC3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Crunchyroll_Recorder.My.MyApplication</StartupObject>
+    <RootNamespace>Crunchyroll_Recorder</RootNamespace>
+    <AssemblyName>Crunchyroll Recorder</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Crunchyroll Recorder.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Crunchyroll Recorder.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>On</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <Optimize>true</Optimize>
+    <DefineDebug>true</DefineDebug>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>Crunchyroll Recorder.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>Crunchyroll Recorder.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>
+    </NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CoreAudio, Version=2023.8.18.121, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CoreAudio.1.37.0\lib\netstandard2.0\CoreAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\CRR_metroframework_x64\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MyProvider, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\CRR_SettingsProvider_x64\MyProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.4.3.1\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.4.3.0\lib\net463\System.Runtime.InteropServices.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="VirtualDesktop, Version=3.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\CRR_vDesktop\VirtualDesktop.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="CRD-Classes.vb" />
+    <Compile Include="ffmpeg_option.Designer.vb">
+      <DependentUpon>ffmpeg_option.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ffmpeg_option.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckBoxComboBox.Designer.vb">
+      <DependentUpon>CheckBoxComboBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CheckBoxComboBox.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="queue.Designer.vb">
+      <DependentUpon>queue.vb</DependentUpon>
+    </Compile>
+    <Compile Include="queue.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.vb" />
+    <Compile Include="GlobalSuppressions.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Anime_Add.Designer.vb">
+      <DependentUpon>Anime_Add.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Anime_Add.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="einstellungen.Designer.vb">
+      <DependentUpon>einstellungen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="einstellungen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProcessSleep.vb" />
+    <Compile Include="ErrorDialog.Designer.vb">
+      <DependentUpon>ErrorDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.designer.vb">
+      <DependentUpon>Main.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="CRD_List_Item.Designer.vb">
+      <DependentUpon>CRD_List_Item.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CRD_List_Item.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Subfolder.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ffmpeg_option.resx">
+      <DependentUpon>ffmpeg_option.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckBoxComboBox.resx">
+      <DependentUpon>CheckBoxComboBox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="queue.resx">
+      <DependentUpon>queue.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Anime_Add.resx">
+      <DependentUpon>Anime_Add.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="einstellungen.resx">
+      <DependentUpon>einstellungen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRD_List_Item.resx">
+      <DependentUpon>CRD_List_Item.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ErrorDialog.resx">
+      <DependentUpon>ErrorDialog.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\x86\Debug\Lib\chrome_100_percent.pak" />
+    <None Include="bin\x86\Debug\Lib\chrome_200_percent.pak" />
+    <None Include="bin\x86\Debug\Lib\icudtl.dat" />
+    <None Include="bin\x86\Debug\Lib\locales\am.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\ar.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\bg.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\bn.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\ca.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\cs.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\da.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\de.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\el.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\en-GB.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\en-US.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\es-419.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\es.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\et.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\fa.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\fi.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\fil.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\fr.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\gu.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\he.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\hi.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\hr.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\hu.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\id.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\it.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\ja.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\kn.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\ko.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\lt.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\lv.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\ml.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\mr.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\ms.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\nb.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\nl.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\pl.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\pt-BR.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\pt-PT.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\ro.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\ru.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\sk.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\sl.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\sr.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\sv.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\sw.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\ta.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\te.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\th.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\tr.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\uk.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\vi.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\zh-CN.pak" />
+    <None Include="bin\x86\Debug\Lib\locales\zh-TW.pak" />
+    <None Include="bin\x86\Debug\Lib\resources.pak" />
+    <None Include="bin\x86\Debug\Lib\snapshot_blob.bin" />
+    <None Include="bin\x86\Debug\Lib\v8_context_snapshot.bin" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\x86\Debug\ffmpeg.exe" />
+    <Content Include="bin\x86\Debug\Lib\CEFRequestHandler.dll" />
+    <Content Include="bin\x86\Debug\Lib\CEFRequestHandler.pdb" />
+    <Content Include="bin\x86\Debug\Lib\CefSharp.BrowserSubprocess.Core.dll" />
+    <Content Include="bin\x86\Debug\Lib\CefSharp.BrowserSubprocess.Core.pdb" />
+    <Content Include="bin\x86\Debug\Lib\CefSharp.BrowserSubprocess.exe" />
+    <Content Include="bin\x86\Debug\Lib\CefSharp.BrowserSubprocess.pdb" />
+    <Content Include="bin\x86\Debug\Lib\CefSharp.Core.dll" />
+    <Content Include="bin\x86\Debug\Lib\CefSharp.Core.pdb" />
+    <Content Include="bin\x86\Debug\Lib\CefSharp.Core.Runtime.dll" />
+    <Content Include="bin\x86\Debug\Lib\CefSharp.Core.Runtime.pdb" />
+    <Content Include="bin\x86\Debug\Lib\CefSharp.Core.Runtime.xml" />
+    <Content Include="bin\x86\Debug\Lib\CefSharp.Core.xml" />
+    <Content Include="bin\x86\Debug\Lib\CefSharp.dll" />
+    <Content Include="bin\x86\Debug\Lib\CefSharp.pdb" />
+    <Content Include="bin\x86\Debug\Lib\CefSharp.WinForms.dll" />
+    <Content Include="bin\x86\Debug\Lib\CefSharp.WinForms.pdb" />
+    <Content Include="bin\x86\Debug\Lib\CefSharp.WinForms.xml" />
+    <Content Include="bin\x86\Debug\Lib\CefSharp.xml" />
+    <Content Include="bin\x86\Debug\Lib\chrome_elf.dll" />
+    <Content Include="bin\x86\Debug\Lib\d3dcompiler_47.dll" />
+    <Content Include="bin\x86\Debug\Lib\libcef.dll" />
+    <Content Include="bin\x86\Debug\Lib\libEGL.dll" />
+    <Content Include="bin\x86\Debug\Lib\libGLESv2.dll" />
+    <Content Include="bin\x86\Debug\Lib\LICENSE.txt" />
+    <Content Include="bin\x86\Debug\Lib\MetroFramework.dll" />
+    <Content Include="bin\x86\Debug\Lib\MetroFramework.pdb" />
+    <Content Include="bin\x86\Debug\Lib\Newtonsoft.Json.dll" />
+    <Content Include="bin\x86\Debug\Lib\Newtonsoft.Json.xml" />
+    <Content Include="bin\x86\Debug\Lib\README.txt" />
+    <Content Include="bin\x86\Debug\Lib\swiftshader\libEGL.dll" />
+    <Content Include="bin\x86\Debug\Lib\swiftshader\libGLESv2.dll" />
+    <Content Include="icon.ico" />
+    <None Include="Resources\BG.png" />
+    <None Include="Resources\ffmpeg_OK_cL.png" />
+    <None Include="Resources\ffmpeg_OK_cL_hover.png" />
+    <None Include="Resources\main-queue_invert_dark.png" />
+    <None Include="Resources\main-queue_invert.png" />
+    <None Include="Resources\main-queue.png" />
+    <None Include="Resources\main_close_hover.png" />
+    <None Include="Resources\main-mini_dark_hover.png" />
+    <None Include="Resources\main-close_dark_hover.png" />
+    <None Include="packages.config" />
+    <None Include="Resources\main-mini_red.png" />
+    <None Include="Resources\main-mini_dark.png" />
+    <None Include="Resources\main-mini.png" />
+    <None Include="Resources\main-setting_invert_dark.png" />
+    <None Include="Resources\main-close_dark.png" />
+    <None Include="Resources\main-browser_invert_dark.png" />
+    <None Include="Resources\main-add_invert_dark.png" />
+    <None Include="Resources\main-setting_invert.png" />
+    <None Include="Resources\main-browser_invert.png" />
+    <None Include="Resources\main-add_invert.png" />
+    <None Include="Resources\Main_top.png" />
+    <None Include="Resources\about_icon.png" />
+    <None Include="Resources\balken_console.png" />
+    <None Include="Resources\main-pause-play-hover.png" />
+    <None Include="Resources\main-pause-play.png" />
+    <None Include="Resources\main-pause-hover.png" />
+    <None Include="Resources\main-pause.png" />
+    <None Include="Resources\main-del-hover.png" />
+    <None Include="Resources\main-del.png" />
+    <None Include="Resources\balken.png" />
+    <None Include="Resources\add_mass_cancel_hover.png" />
+    <None Include="Resources\add_mass_cancel.png" />
+    <None Include="Resources\main-settings.png" />
+    <None Include="Resources\main-browser.png" />
+    <None Include="Resources\main-add.png" />
+    <None Include="Resources\main-close.png" />
+    <None Include="Resources\main-background.png" />
+    <None Include="Resources\download_subs_hover.png" />
+    <None Include="Resources\download_subs.png" />
+    <None Include="Resources\DialogNotFound_Submit_hover.png" />
+    <None Include="Resources\DialogNotFound_Submit.png" />
+    <None Include="Resources\main_button_download-deactivate.png" />
+    <None Include="Resources\main_button_download_hovert.png" />
+    <None Include="Resources\main_button_download_default.png" />
+    <None Include="Resources\crdSettings_Button_SafeExit_hover.png" />
+    <None Include="Resources\crdSettings_Button_SafeExit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

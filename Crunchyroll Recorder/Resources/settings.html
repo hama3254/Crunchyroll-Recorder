@@ -1,0 +1,123 @@
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Audio Swicher Settings</title>
+    <style>
+        body {
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+            min-height: 200px;
+            min-width: 250px;
+            font-family: 'Lato', sans-serif;
+            background: #c8c8c8;
+            color: #9faab7;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 5px;
+        }
+
+        h3 {
+            font-size: 1rem;
+            font-weight: bold;
+            margin: 5px;
+        }
+
+        .linkclass {
+            font-size: 1rem;
+            font-weight: bold;
+            margin: 5px;
+            color: inherit;
+        }
+
+        .frame {
+            width: 80%;
+            background: #fff;
+            padding: 25px;
+            border-radius: 1rem;
+            background-position: center;
+        }
+
+        body label {
+            line-height: 25px;
+        }
+		
+		 .styled-button {
+            width: 150px;
+            height: 40px;
+            background-color: orange;
+            color: white;
+            border: none;
+            border-radius: 8px; 
+            font-size: 16px;
+            font-family: 'Lato', sans-serif;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none; 
+        }
+
+        .styled-button:hover {
+            background-color: darkorange; 
+        }
+    </style>
+</head>
+
+<body>
+	<center>
+		<div id="frame2" class="frame" > 
+			<h2 id="bulgy-radios-label">To redirect the audio JavaScript needs permissions for the microphone.</h2>	
+			<h2 id="bulgy-radios-label">Please grand me the permission with the submit button </h2>	
+			
+			<br>
+			<button id="btn_permission" class="styled-button">Trigger On!</button>
+		</div> 
+	</center>
+	</body>
+<script>
+
+document.getElementById('btn_permission').onclick = async function() {
+
+navigator.mediaDevices.getUserMedia({ audio: true })
+      .then(function(stream) {
+        console.log('You let me use your mic!')
+		window.location.replace("https://www.youtube.com/watch?v=LTfcnZPdgeM"); //just some detection links; maybe replace with a rickroll later
+      })
+      .catch(function(err) {
+        console.log('No mic for you!')
+		window.location.replace("https://www.youtube.com/watch?v=kibMJYxeR1s"); //just some detection links; maybe replace with a rickroll later
+	
+	var h3 = document.createElement('h3');
+    h3.id = 'bulgy-radios-label';
+    h3.innerHTML = "<br>It looks like you denied the acces to the microphone.<br>That's ok, you can still use the Plugin but i can not display the device names";
+    document.getElementById('frame2').appendChild(h3);
+	
+	var h3_1 = document.createElement('a');
+    h3_1.id = 'linkclass';
+	h3_1.className = 'linkclass';
+    h3_1.innerHTML = '<br>To quote from the developer site:<br>"For security reasons, the label is always an empty string ("")<br> if the user has not obtained permission to use at least one media device,<br> either by starting a stream from the microphone or camera, or by persistent permissions being granted."';
+	h3_1.href = "https://developer.mozilla.org/en-US/docs/Web/API/MediaDeviceInfo/label";
+   document.getElementById('frame2').appendChild(h3_1);
+     
+	var h3_2 = document.createElement('h3');
+    h3_2.id = 'bulgy-radios-label';
+    h3_2.innerHTML = '<br>You can reverse this action on any time.';
+    document.getElementById('frame2').appendChild(h3_2);
+	
+	var img = document.createElement("img");
+	img.src = "/images/FAQ1.png";
+	document.getElementById('frame2').appendChild(img);
+	
+	 });
+
+
+}
+</script>
+</html>

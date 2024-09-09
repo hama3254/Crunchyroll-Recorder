@@ -1,0 +1,18 @@
+#Folder
+Crunchyroll Recorder/bin/
+Crunchyroll Recorder/bin
+Crunchyroll Recorder/obj/
+Crunchyroll Recorder/obj
+BrowserWindow/bin/
+BrowserWindow/bin
+BrowserWindow/obj/
+BrowserWindow/obj
+packages/
+.vs/
+
+#Files
+*.zip
+*.mp4
+*.log
+*.key
+*.bak
