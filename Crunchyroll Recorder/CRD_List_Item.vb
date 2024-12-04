@@ -218,7 +218,8 @@ Public Class CRD_List_Item
 
         RecPath = TempFolder
         VideoPath = DL_Pfad
-        'Directory.SetCurrentDirectory("C:\Projecte\WinForm_cli\WinForm_cli\bin\Debug")
+
+        LogText.Add(Date.Now.ToString + " Start Download " + RecPath + " - " + VideoPath)
 
         Dim BrowserArg As String = Chr(34) + Label_website.Text + Chr(34) + " " + Chr(34) + Filename + Chr(34) + " " + Chr(34) + "True" + Chr(34) 'we don't have any softsubs so CR Default subs it is!. "--profile " + Chr(34) + Profile + Chr(34) + " --collection " + Chr(34) + Profile + Chr(34) + " --startrecording" ' --minimize-to-tray
 
@@ -284,7 +285,7 @@ Public Class CRD_List_Item
         scenes_json = scenes_json.Replace("[RecDev]", selectedDeviceKey)
         System.IO.File.WriteAllText(Path.Combine(scenefolderPath, Profile + ".json"), scenes_json)
 
-
+        LogText.Add(Date.Now.ToString + "using profile: " + Profile)
 
 
 
@@ -321,6 +322,8 @@ Public Class CRD_List_Item
         Try
             'MsgBox(e.Data.ToString)
             If e.Data.ToString = "Alles klar, Kinder?" Then
+                LogText.Add(Date.Now.ToString + "Link Start!")
+
                 Directory.SetCurrentDirectory("C:\Program Files\obs-studio\bin\64bit\")
 
                 Dim arg As String = "--profile " + Chr(34) + Profile + Chr(34) + " --collection " + Chr(34) + Profile + Chr(34) + " --startrecording --disable-updater --disable-shutdown-check" ' --minimize-to-tray
@@ -342,6 +345,7 @@ Public Class CRD_List_Item
                 OBS_Proc.Start()
 
             ElseIf e.Data.ToString = "Dann schwingt euch an Deck und kommt ja nicht zu spät!" Then
+                LogText.Add(Date.Now.ToString + "I like to move it move it")
                 Pause(2)
                 Dim hWnd As IntPtr = FindWindow(vbNullString, BrowserProc.MainWindowTitle.ToString) 'FindWindow(vbNullString, driver.Title + " - Google Chrome")
                 VirtualDesktopHelper.MoveToDesktop(hWnd, v)
@@ -351,7 +355,7 @@ Public Class CRD_List_Item
                 VirtualDesktopHelper.MoveToDesktop(hWndOBS, v)
                 '"
             ElseIf CBool(InStr(e.Data.ToString, "<--")) Then
-
+                LogText.Add(Date.Now.ToString + " " + e.Data.ToString)
 
                 Dim JS As String = e.Data.ToString.Replace("<--", "").Replace("-->", "")
                 Dim JS_Cleaned() As String = JS.Split(New String() {"."}, System.StringSplitOptions.RemoveEmptyEntries)
@@ -376,6 +380,7 @@ Public Class CRD_List_Item
                                      End Function))
 
             ElseIf CBool(InStr(e.Data.ToString, "<-")) Then
+                LogText.Add(Date.Now.ToString + " " + e.Data.ToString)
 
                 Dim JS As String = e.Data.ToString.Replace("<-", "").Replace("->", "")
 
@@ -397,6 +402,8 @@ Public Class CRD_List_Item
 
 
             ElseIf CBool(InStr(e.Data.ToString, ">-Fine-<")) Then
+                LogText.Add(Date.Now.ToString + " " + e.Data.ToString)
+
                 Dim RecLength As TimeSpan = OBS_Proc.StartTime.Subtract(Date.Now)
 
                 BrowserProc.CancelErrorRead()
