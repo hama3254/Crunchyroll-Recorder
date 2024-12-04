@@ -218,6 +218,9 @@ Public Class Anime_Add
             My.Settings.Pfad = Main.Pfad
             My.Settings.Save()
             Pfad_tBox.Text = Main.Pfad
+            If My.Settings.TempFolder = Nothing Then
+                Main.TempFolder = Main.Pfad
+            End If
 
         End If
     End Sub
